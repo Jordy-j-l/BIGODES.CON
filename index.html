@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bigodes</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    header{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      background:linear-gradient(135deg,#1a1a1a,#2b2b2b);
+      padding:20px;
+    }
+
+    h1{
+      font-size:5rem;
+      margin-bottom:20px;
+    }
+
+    h1 span{
+      color:#ffb703;
+    }
+
+    p{
+      max-width:700px;
+      line-height:1.7;
+      color:#ccc;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:15px 35px;
+      border:none;
+      border-radius:50px;
+      background:#ffb703;
+      color:#111;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:#1d1d1d;
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      background:#252525;
+    }
+
+    .emoji{
+      font-size:4rem;
+      margin-bottom:20px;
+    }
+
+    footer{
+      padding:30px;
+      text-align:center;
+      background:#0d0d0d;
+      color:#777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Os <span>Bigodes</span></h1>
+
+    <p>
+      Elegância, respeito e puro estilo. 
+      Um bigode não é apenas pelo facial. 
+      É uma filosofia de vida.
+    </p>
+
+    <a href="#tipos" class="btn">Explorar Bigodes</a>
+  </header>
+
+  <section id="tipos">
+    <h2 style="font-size:3rem;">Tipos de Bigode</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="emoji">🧔</div>
+        <h3>Clássico</h3>
+        <p>
+          O tradicional. Simples, elegante e intemporal.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🎩</div>
+        <h3>Vintage</h3>
+        <p>
+          Inspirado nos cavalheiros antigos e no estilo retro.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="emoji">🔥</div>
+        <h3>Mexicano</h3>
+        <p>
+          Grande, marcante e impossível de ignorar.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2 style="font-size:3rem;">Porque ter um?</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>+ Estilo</h3>
+        <p>
+          Dá personalidade instantânea.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>+ Respeito</h3>
+        <p>
+          Bigode forte, presença forte.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>+ Carisma</h3>
+        <p>
+          Cientificamente talvez não... mas claramente sim.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 - Sociedade Internacional dos Bigodes
+  </footer>
+
+</body>
+</html>
