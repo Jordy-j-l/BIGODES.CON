@@ -1,247 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bigode do Brode</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bigode do Brode</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-    body {
-      background: #111;
-      color: #fff;
-    }
+        body {
+            background: #111;
+            color: #fff;
+        }
 
-    header {
-      min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, #111, #2b1b10);
-    }
+        header {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #111, #2b1b10);
+        }
 
-    .hero {
-      max-width: 850px;
-    }
+        .logo img {
+            width: 140px;
+            max-width: 100%;
+        }
 
-    .logo {
-      font-size: 5rem;
-      margin-bottom: 20px;
-    }
+        .btn img {
+            width: 45px;
+            display: block;
+        }
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 20px;
-    }
+        h2 img {
+            width: 45px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
 
-    h1 span {
-      color: #ffb703;
-    }
+        .bigode img {
+            width: 70px;
+        }
 
-    p {
-      color: #ddd;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      margin-bottom: 25px;
-    }
+        .mustache-link img {
+            width: 120px;
+            max-width: 100%;
+        }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 35px;
-      border-radius: 50px;
-      background: #ffb703;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+        .hero {
+            max-width: 850px;
+        }
 
-    .btn:hover {
-      transform: scale(1.08);
-    }
+        .logo {
+            margin-bottom: 20px;
+        }
 
-    section {
-      padding: 90px 10%;
-      text-align: center;
-    }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
 
-    h2 {
-      font-size: 3rem;
-      margin-bottom: 25px;
-      color: #ffb703;
-    }
+        h1 span {
+            color: #ffb703;
+        }
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
+        p {
+            color: #ddd;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
 
-    .card {
-      background: #1c1c1c;
-      padding: 30px;
-      border-radius: 20px;
-      transition: 0.3s;
-    }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 50px;
+            background: #ffb703;
+            color: #111;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .card:hover {
-      transform: translateY(-8px);
-      background: #252525;
-    }
+        .btn:hover {
+            transform: scale(1.08);
+        }
 
-    .card h3 {
-      margin-bottom: 15px;
-      color: #ffb703;
-    }
+        section {
+            padding: 90px 10%;
+            text-align: center;
+        }
 
-    .bigode {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: #ffb703;
+        }
 
-    .final {
-      background: #181818;
-      position: relative;
-    }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
 
-    .secret-area {
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.5rem;
-    }
+        .card {
+            background: #1c1c1c;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
 
-    .arrows {
-      color: #ffb703;
-      font-weight: bold;
-      animation: pulse 1s infinite alternate;
-    }
+        .card:hover {
+            transform: translateY(-8px);
+            background: #252525;
+        }
 
-    .mustache-link {
-      font-size: 5rem;
-      text-decoration: none;
-      transition: 0.3s;
-      display: inline-block;
-    }
+        .card h3 {
+            margin-bottom: 15px;
+            color: #ffb703;
+        }
 
-    .mustache-link:hover {
-      transform: scale(1.2) rotate(-5deg);
-    }
+        .bigode {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
 
-    footer {
-      padding: 25px;
-      text-align: center;
-      background: #0b0b0b;
-      color: #777;
-    }
+        .final {
+            background: #181818;
+            position: relative;
+        }
 
-    @keyframes pulse {
-      from {
-        transform: scale(1);
-        opacity: 0.7;
-      }
-      to {
-        transform: scale(1.1);
-        opacity: 1;
-      }
-    }
+        .secret-area {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+        }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2.7rem;
-      }
+        .arrows {
+            color: #ffb703;
+            font-weight: bold;
+            animation: pulse 1s infinite alternate;
+        }
 
-      h2 {
-        font-size: 2.2rem;
-      }
-    }
-  </style>
+        .mustache-link {
+            font-size: 5rem;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .mustache-link:hover {
+            transform: scale(1.2) rotate(-5deg);
+        }
+
+        footer {
+            padding: 25px;
+            text-align: center;
+            background: #0b0b0b;
+            color: #777;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            to {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.7rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="hero">
-      <div class="logo"><img src="bigode.png" alt="hehehe"></div>
-      <h1>Para o meu <span>Colega de Bigode</span></h1>
-      <p>
-        Este site é dedicado a um amigo que faz o bigode quase todo dia de manhã,
-        que partilhou casa, histórias, momentos aleatórios, "noites de estudo",
-        conversas sem sentido e bota sem sentido nisso e memórias que ficam para sempre.
-      </p>
-      <a href="#historia" class="btn"><img src="bigode.png" alt="hehehe"></a>
-    </div>
-  </header>
+    <header>
+        <div class="hero">
+            <div class="logo"><img src="bigode.png" alt="hehehe"></div>
+            <h1>Para o meu <span>Colega de Bigode</span></h1>
+            <p>
+                Este site é dedicado a um amigo que faz o bigode quase todo dia de manhã,
+                que partilhou casa, histórias, momentos aleatórios, "noites de estudo",
+                conversas sem sentido e bota sem sentido nisso e memórias que ficam para sempre.
+            </p>
+            <a href="#historia" class="btn"><img src="bigode.png" alt="hehehe"></a>
+        </div>
+    </header>
 
-  <section id="historia">
-    <h2><img src="bigode.png" alt="hehehe"> A Nossa Jornada</h2>
-    <p>
-      Desde o início que nos conhecemos e que não gostavas de mim até aos dias em que partilhámos casa,
-      muita coisa aconteceu. Houve trabalhos, stress, piadas internas,
-      refeições duvidosas, conversas longas e momentos que só nós entendemos.
-    </p>
+    <section id="historia">
+        <h2><img src="bigode.png" alt="hehehe"> A Nossa Jornada</h2>
+        <p>
+            Desde o início que nos conhecemos e que não gostavas de mim até aos dias em que partilhámos casa,
+            muita coisa aconteceu. Houve trabalhos, stress, piadas internas,
+            refeições duvidosas, conversas longas e momentos que só nós entendemos.
+        </p>
 
-    <div class="cards">
-      <div class="card">
-        <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
-        <h3>EMANUEL NOUTEL OLIVEIRA</h3>
-        <p>É um gajo de bigode que não sabe o que é dormir até tarde,esse gajo foi o cabrão responsavel por me levantar todos os dias de manhã durante uma fase dificil da minha vida ele teve de me acordar nos meus melhores dias nos piores dias e a té em ataques de panico social ou burnoutes agradeço por tudo</p>
-      </div>
+        <div class="cards">
+            <div class="card">
+                <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
+                <h3>EMANUEL NOUTEL OLIVEIRA</h3>
+                <p>É um gajo de bigode que não sabe o que é dormir até tarde,esse gajo foi o cabrão responsavel por me
+                    levantar todos os dias de manhã durante uma fase dificil da minha vida ele teve de me acordar nos
+                    meus melhores dias nos piores dias e até em ataques de panico social ou burnout agradeço por tudo
+                </p>
+            </div>
 
-      <div class="card">
-        <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
-        <h3>Puta Fina</h3>
-        <p>Partilhar casa é descobrir quem é a pessoa de verdade antes de partilhar casa com ele eu já sabia que ele era uma puta fina vendo o que ele bebia mas depois de ir morar com essa pessoa eu descubri que ele é uma princesa não sabia lavar loiça cozinhar e limpar até hoje tou a tentar descubrir como ele vivia antes de mim mas eu gosto de fazer jantar para ele e ouvir suas reclamações e sugestões de uma pessoa que nunca tocou numa panela amo os nossos jantares aleatorios </p>
-      </div>
+            <div class="card">
+                <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
+                <h3>Puta Fina</h3>
+                <p>Partilhar casa é descobrir quem é a pessoa de verdade antes de partilhar casa com ele eu já sabia que
+                    ele era uma puta fina vendo o que ele bebia mas depois de ir morar com essa pessoa eu descubri que
+                    ele é uma princesa não sabia lavar loiça cozinhar e limpar até hoje tou a tentar descubrir como ele
+                    vivia antes de mim mas eu gosto de fazer jantar para ele e ouvir suas reclamações e sugestões de uma
+                    pessoa que nunca tocou numa panela amo os nossos jantares aleatorios </p>
+            </div>
 
-      <div class="card">
-        <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
-        <h3>Defeitos</h3>
-        <p>Ele tem muitos mais o principal deles que ele é um coração mole do caralho que gosta de ajudar as pessoas incondicionalmente ele se esconde numa casca demostrando que é durão mas é uma princesinha delicada que todos gostam.</p>
-      </div>
-    </div>
-  </section>
+            <div class="card">
+                <div class="bigode"><img src="bigode.png" alt="hehehe"></div>
+                <h3>Defeitos</h3>
+                <p>Ele tem muitos mais o principal deles que ele é um coração mole do caralho que gosta de ajudar as
+                    pessoas incondicionalmente ele se esconde numa casca demostrando que é durão mas é uma princesinha
+                    delicada que todos gostam.</p>
+            </div>
+        </div>
+    </section>
 
-  <section>
-    <h2>O Símbolo Oficial</h2>
-    <p>
-      O bigode representa o estilo,as manhãs a atura-lo no espelho a aranjar aquele bigode e representa a sua essencia
-    </p>
+    <section>
+        <h2>O Símbolo Oficial</h2>
+        <p>
+            O bigode representa o estilo,as manhãs a atura-lo no espelho a aranjar aquele bigode e representa a sua
+            essencia
+        </p>
 
-    <div class="logo"><img src="bigode.png" alt="hehehe"></div>
-  </section>
+        <div class="logo"><img src="bigode.png" alt="hehehe"></div>
+    </section>
 
-  <section class="final">
-    <h2>Zona Secreta do Bigode</h2>
-    <p>
-      Clica no bigode para abrir o lado negro da net na minha opinião entendedores entenderão .
-    </p>
+    <section class="final">
+        <h2>Zona Secreta do Bigode</h2>
+        <p>
+            Clica no bigode para abrir o lado negro da net na minha opinião entendedores entenderão .
+        </p>
 
-    <div class="secret-area">
-      <div class="arrows">⬇️⬇️⬇️</div>
+        <div class="secret-area">
+            <div class="arrows">⬇️⬇️⬇️</div>
 
-      <a href="https://www.instagram.com/emanueliveira777/" class="mustache-link" target="_blank">
-        <img src="bigode.png" alt="hehehe">
-      </a>
+            <a href="https://www.instagram.com/emanueliveira777/" class="mustache-link" target="_blank">
+                <img src="bigode.png" alt="hehehe">
+            </a>
 
-      <div class="arrows">⬆️⬆️⬆️</div>
-    </div>
-  </section>
+            <div class="arrows">⬆️⬆️⬆️</div>
+        </div>
+    </section>
 
-  <footer>
-    © 2026 — Criado para não ter trabalho de escrever a fita mais deu mais trabalho fazer o site e desenhar o qr code na fita 🥸
-  </footer>
+    <footer>
+        © 2026 — Criado para não ter trabalho de escrever a fita mais deu mais trabalho fazer o site e desenhar o qr
+        code na fita 🥸
+    </footer>
 
 </body>
+
 </html>
